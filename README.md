@@ -11,7 +11,7 @@ If you already have something running on 8085, use another port.
 
 Use curl to interact with the system. If you're on windows use curl in your git-bash shell.
 
-If for some reason docker is not working for you, substitute localhost for 212.47.237.59 in the following commands.
+If for some reason docker is not working for you, substitute localhost with 212.47.237.59 in the following commands.
 
 ## Commands
 
