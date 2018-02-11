@@ -24,7 +24,8 @@ router.get('/mentionedUsers', (req, res) =>{
                 resArr[i] = {"place":i+1,"name":users[i]._id,"count":users[i].count}
             }
             result = {"These are the users that mostly link other users:":resArr}
-            res.json(result);
+            res.header("Content-Type",'application/json');
+            res.send(JSON.stringify(result, null, 4));
             
         })
         .catch(err => {
@@ -41,7 +42,8 @@ router.get('/mostActive', (req, res) =>{
                 resArr[i] = {"place":i+1,"name":users[i]._id,"count":users[i].count}
             }
             result = {"These are the most active users:":resArr}
-            res.json(result);
+            res.header("Content-Type",'application/json');
+            res.send(JSON.stringify(result, null, 4));
             
         })
         .catch(err => {
@@ -58,7 +60,8 @@ router.get('/negative', (req, res) =>{
                 resArr[i] = {"place":i+1,"name":users[i]._id,"count":users[i].count}
             }
             result = {"These are the most negative users:":resArr}
-            res.json(result);
+            res.header("Content-Type",'application/json');
+            res.send(JSON.stringify(result, null, 4));
             
         })
         .catch(err => {
@@ -75,7 +78,9 @@ router.get('/positive', (req, res) =>{
                 resArr[i] = {"place":i+1,"name":users[i]._id,"count":users[i].count}
             }
             result = {"These are the most positive users:":resArr}
-            res.json(result);
+            res.header("Content-Type",'application/json');
+            res.send(JSON.stringify(result, null, 4));
+            
             
         })
         .catch(err => {

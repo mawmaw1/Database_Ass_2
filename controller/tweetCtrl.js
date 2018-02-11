@@ -30,7 +30,7 @@ exports.getNegativeUsers = () => {
         {$match:{polarity: {"$lte":1}}},
         {$group: {_id: '$user', count: {$sum:1}}},
         {$sort:{count:-1}},
-        {$limit: 10}
+        {$limit: 5}
     ])
 }
 
@@ -39,6 +39,6 @@ exports.getPositiveUsers = () => {
         {$match:{polarity: {"$gte":3}}},
         {$group: {_id: '$user', count: {$sum:1}}},
         {$sort:{count:-1}},
-        {$limit: 10}
+        {$limit: 5}
         ])
 }
