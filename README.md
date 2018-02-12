@@ -15,7 +15,7 @@ If for some reason docker is not working for you, the application is set up on a
 
 The system is using a mongoDB container, running on the before mentioned server.
 
-Keep in mind that this system is extremely slow, so be patient.
+Keep in mind that this system is extremely slow, so be patient. Also, the command (3) for most mentioned users is not implemented.
 
 ### Commands
 
@@ -30,7 +30,7 @@ Output:
 "There are currently 659774 distinct users in the DB"%
 ```
 
-#### Find the most mentioned users:
+#### Find the users that mostly link other users:
 ```
 > curl localhost:8085/mentionedUsers
 or
